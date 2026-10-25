@@ -1,440 +1,487 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090614">
-<title>to my moon, anis ♡</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff1f6">
+<title>for anis ♡</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
 
-*{box-sizing:border-box;margin:0;padding:0}
-
+*{box-sizing:border-box}
 body{
- min-height:100vh;
- background:
- radial-gradient(ellipse at 10% 10%,#43236c 0%,transparent 40%),
- radial-gradient(ellipse at 90% 80%,#30205e 0%,transparent 40%),
- linear-gradient(145deg,#080512,#130b28,#090614);
- color:#e9e0ff;
- font-family:'DM Sans',sans-serif;
- display:flex;
- justify-content:center;
- align-items:center;
- padding:24px 14px;
- overflow-x:hidden;
-}
-
-#stars{position:fixed;inset:0;pointer-events:none;overflow:hidden}
-.star{
- position:absolute;background:#fff;border-radius:50%;
- animation:twinkle 2.8s infinite alternate;
-}
-@keyframes twinkle{
- from{opacity:.2;transform:scale(.7)}
- to{opacity:1;transform:scale(1.2)}
-}
-
-.nebula{
- position:fixed;width:230px;height:230px;border-radius:50%;
- filter:blur(75px);opacity:.23;pointer-events:none;
- animation:float 15s ease-in-out infinite alternate;
-}
-.n1{background:#a855f7;top:10%;left:-100px}
-.n2{background:#6655df;bottom:5%;right:-100px;animation-delay:-7s}
-@keyframes float{to{transform:translate(70px,-45px)}}
-
-.moon{
- position:fixed;right:8%;top:7%;font-size:55px;
- color:#e8d9ff;opacity:.8;
- filter:drop-shadow(0 0 25px #c4a5ff80);
- pointer-events:none;
-}
-
-.container{width:100%;max-width:520px;position:relative;z-index:2}
-
-header{text-align:center;margin-bottom:19px}
-.eyebrow{
- color:#bda1ff;font-size:10px;letter-spacing:3px;
- text-transform:uppercase;margin-bottom:9px
-}
-h1{
- font:italic 500 31px 'Playfair Display',serif;
- color:#f0d9ff;text-shadow:0 0 25px #c084fc45
-}
-.subtitle{font-size:11px;color:#a89abb;margin-top:9px}
-
-.card{
- background:rgba(20,13,40,.87);
- border:1px solid #b69aff35;
- border-radius:25px;
- box-shadow:0 0 55px #753ac21c,inset 0 0 25px #a78bfa08;
- backdrop-filter:blur(15px);
- min-height:480px;
- padding:32px 24px;
+ margin:0;min-height:100vh;padding:18px;
+ font-family:'DM Sans',sans-serif;color:#75465b;
+ background:linear-gradient(145deg,#fff9fc,#ffe5ef);
  display:flex;align-items:center;justify-content:center;
- text-align:center;
 }
-
-.slide{display:none;width:100%}
-.slide.active{display:block;animation:appear .45s ease}
-@keyframes appear{
- from{opacity:0;transform:translateY(9px)}
- to{opacity:1;transform:translateY(0)}
-}
-
-.emoji{font-size:40px;margin-bottom:17px;filter:drop-shadow(0 0 12px #bba0ff45)}
-h2{
- font:500 25px 'Playfair Display',serif;
- color:#e3cbff;line-height:1.4;margin-bottom:17px
-}
-p{font-size:13px;line-height:1.95;color:#d2c6e6;white-space:pre-line}
-.pink{color:#e3b8ff;font-weight:600}
-.arabic{
- direction:rtl;
- font-family:'Noto Naskh Arabic','Times New Roman',serif;
- font-size:28px;line-height:2.1;
- color:#f0d9ff;margin:19px 0;
-}
-.translation{
- border:1px solid #c4a5ff25;background:#a78bfa0c;
- border-radius:13px;padding:13px;margin-top:13px;
- color:#e2d6f8;font-size:13px;line-height:1.9;
-}
-.ref{font-size:11px;color:#b9a0f0;margin-top:10px}
-.line{width:40px;height:1px;background:#bda1ff;margin:20px auto}
-.quote{
- font:italic 18px 'Playfair Display',serif;
- color:#d9bcff;line-height:1.8;margin-top:17px
-}
-
-.progress{display:flex;justify-content:center;gap:6px;margin:19px 0;flex-wrap:wrap}
-.dot{height:6px;width:6px;border-radius:10px;background:#57466e;transition:.3s}
-.dot.active{width:20px;background:#c4a5ff;box-shadow:0 0 12px #c4a5ff70}
-
-.buttons{display:flex;justify-content:center;gap:11px}
-button{
- font-family:inherit;font-size:12px;font-weight:600;
- padding:13px 22px;border-radius:30px;cursor:pointer;
- color:#e9dcff;background:#211536;border:1px solid #bba0ed45;
- transition:.2s
-}
+button,input{font:inherit}
+button{cursor:pointer;border:0;transition:.2s}
+button:hover{filter:brightness(.96)}
 button:active{transform:scale(.97)}
-#next{background:linear-gradient(120deg,#7138bb,#a855f7);border:none;color:white}
-.footer{text-align:center;color:#a18bbd;font-size:10px;margin-top:22px;letter-spacing:1px}
-
-@media(max-width:380px){
- .card{padding:26px 18px;min-height:510px}
- h2{font-size:23px}
- p{font-size:12px}
- .arabic{font-size:25px}
- .moon{font-size:38px}
+.screen{display:none;width:100%;max-width:500px}
+.screen.active{display:block;animation:show .3s ease}
+.card{
+ background:#fffafd;padding:28px 20px;border-radius:25px;
+ box-shadow:0 12px 40px #a85e781b;text-align:center;
+ border:1px solid white;
 }
+h1,h2{font-family:'Playfair Display',serif;font-weight:500}
+h1{font-size:40px;margin:12px 0}
+h2{font-size:29px;margin:12px 0}
+p{font-size:14px;line-height:1.8}
+.small{font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.65}
+.emoji{font-size:43px;margin:10px}
+.primary,.secondary{padding:12px 20px;border-radius:30px;margin:5px}
+.primary{background:#e99fba;color:white}
+.secondary{background:#ffedf4;color:#75465b}
+input[type=password]{width:100%;padding:14px;border:1px solid #e8bfd0;border-radius:13px;text-align:center;margin:12px 0;outline:none}
+.message{min-height:24px;font-size:13px;margin:12px 0}
+.gamebox{padding:15px;background:#fff0f6;border-radius:18px;margin:16px 0}
+.arena{height:155px;position:relative;background:#fff9fc;border-radius:15px;overflow:hidden;margin:12px 0}
+.target{position:absolute;top:50%;transform:translate(-50%,-50%);font-size:38px}
+.range{width:90%;accent-color:#df8eac}
+.pinrow{font-size:24px;line-height:1.8;overflow-wrap:anywhere}
+.bricks{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:15px 0}
+.brick{height:45px;border-radius:8px;background:#dc91af;color:white}
+.brick.gone{visibility:hidden}
+.tiles{display:grid;grid-template-columns:repeat(2,85px);justify-content:center;gap:8px;margin:18px}
+.tile{height:70px;border-radius:12px;background:#e99fba;color:white;font-size:24px}
+.tile.done{background:#9dbca4}
+.slots{display:flex;justify-content:center;gap:8px;margin:18px 0}
+.slot{width:47px;height:55px;border:2px solid #ecc4d5;border-radius:12px;background:white;font-size:23px}
+.slot.selected{background:#ffdce9;border-color:#c16e91}
+.colors{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;max-width:260px;margin:15px auto}
+.color{height:58px;border-radius:12px;color:white;font-size:21px}
+.c0{background:#d7789e}.c1{background:#819bd0}.c2{background:#80b59a}.c3{background:#d4a15e}
+.slideText{white-space:pre-line;text-align:left;line-height:1.9;font-size:14px;margin:22px 0}
+.progress{height:5px;background:#f5dce6;border-radius:10px;overflow:hidden;margin:15px 0}
+#bar{height:100%;width:0;background:#df8eac}
+#musicBtn{display:none;position:fixed;top:10px;right:10px;background:white;color:#75465b;padding:10px 13px;border-radius:20px;border:1px solid #efd3df}
+@keyframes show{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
 </style>
 </head>
-
 <body>
-<div id="stars"></div>
-<div class="nebula n1"></div>
-<div class="nebula n2"></div>
-<div class="moon">☾</div>
 
-<main class="container">
-<header>
- <div class="eyebrow">✦ somewhere under the same sky ✦</div>
- <h1>to my moon, anis ♡</h1>
- <div class="subtitle">a little letter from your bb, with love & doa</div>
-</header>
-
-<section class="card">
-
-<!-- 1 -->
-<article class="slide active">
- <div class="emoji">🌌</div>
- <h2>hiii my pretty girl.</h2>
- <p>mau balik uia suda dia  🥹💜
-
-mau start suda sem 2 dia before sayang busy dengan kelas , assignment and all those things , i want to tell you something
-
-nd panjang sangat pun , just some words from bb for my favourite person
-
-i know sayang mau buat yang terbaik this semester , and i'm really proud of you for trying
-
-but sayang , promise bb one thing...
-
-<span class="pink">please don't forget yourself while chasing your dreams , okay?</span></p>
-</article>
-
-<!-- 2 -->
-<article class="slide">
- <div class="emoji">🌙</div>
- <h2>don't pressure yourself too much</h2>
- <p>sayang , nanti kalau assignment banyak or ada subject yang susah , please take your time.
-
-nd payah paksa diri sampai penat sangat. if you need a break , rest dulu kalau nd faham , cuba belajar sikit-sikit okee.
-
-you don't have to understand everything immediately.
-
-and please jangan compare diri sayang dengan orang lain everyone has their own pace
-
-bb nd expect sayang jadi perfect pun.
-
-<span class="pink">i just want you to try your best and still be kind to yourself.</span>
-
-that's enough for me , sayang. ♡</p>
-</article>
-
-<!-- 3 -->
-<article class="slide">
- <div class="emoji">📖</div>
- <h2>a little reminder from the quran.</h2>
- <div class="arabic">لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا</div>
- <div class="translation">"Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya."</div>
- <div class="ref">Surah Al-Baqarah · 2:286</div>
- <div class="line"></div>
- <p>when things feel too much , remember this verse ya sayang.
-
-buat apa yang sayang mampu , satu-satu. nd payah fikir semua benda sekaligus sampai diri sendiri stress
-
-ask Allah for help , do your part , and take a breath
-
-<span class="pink">one difficult day doesn't mean you can't do this.</span></p>
-</article>
-
-<!-- 4 -->
-<article class="slide">
- <div class="emoji">✨</div>
- <h2>there is ease after hardship.</h2>
- <div class="arabic">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
- <div class="translation">"Maka sesungguhnya bersama kesulitan ada kemudahan. Sesungguhnya bersama kesulitan ada kemudahan."</div>
- <div class="ref">Surah Ash-Sharh · 94:5–6</div>
- <div class="line"></div>
- <p>kalau nanti ada hari yang buat sayang rasa macam everything is going wrong , please don't give up on yourself too quickly , okay?
-
-some things take time. some lessons are harder than others.
-
-rest kejap , try again when you're ready.
-
-<span class="pink">you don't have to figure out your whole life today.</span></p>
-</article>
-
-<!-- 5 -->
-<article class="slide">
- <div class="emoji">🤲🏻</div>
- <h2>a dua before you study.</h2>
- <div class="arabic">رَبِّ اشْرَحْ لِي صَدْرِي ۝ وَيَسِّرْ لِي أَمْرِي</div>
- <div class="translation">"Wahai Tuhanku, lapangkanlah dadaku dan mudahkanlah bagiku urusanku."</div>
- <div class="ref">Surah Taha · 20:25–26</div>
- <div class="line"></div>
- <p>sayang boleh baca doa ni sebelum kelas , test or bila rasa nervous.
-
-semoga Allah lapangkan hati sayang , mudahkan sayang faham apa yang dipelajari and bagi ketenangan bila sayang rasa risau.
-
-do your best , okay my moon? 💜</p>
-</article>
-
-<!-- 6 -->
-<article class="slide">
- <div class="emoji">🌠</div>
- <h2>ask Allah, and keep going.</h2>
- <div class="arabic">وَقُل رَّبِّ زِدْنِي عِلْمًا</div>
- <div class="translation">"Dan katakanlah: Wahai Tuhanku, tambahkanlah ilmuku."</div>
- <div class="ref">Surah Taha · 20:114</div>
- <div class="line"></div>
- <p>simple doa , but such a beautiful thing to remember before learning something new.
-
-you don't have to know everything already , sayang. we're all still learning.
-
-kalau salah , belajar balik. kalau belum faham , cuba lagi.
-
-<span class="pink">it's okay to be a beginner at something.</span>
-
-semoga ilmu yang sayang dapat nanti bermanfaat untuk masa depan sayang. 🤍</p>
-</article>
-
-<!-- 7 -->
-<article class="slide">
- <div class="emoji">🪐</div>
- <h2>your effort is not wasted.</h2>
- <div class="arabic">وَأَن لَّيْسَ لِلْإِنسَانِ إِلَّا مَا سَعَىٰ</div>
- <div class="translation">"Dan bahawa sesungguhnya manusia tidak memperoleh selain apa yang diusahakannya."</div>
- <div class="ref">Surah An-Najm · 53:39</div>
- <div class="line"></div>
- <p>sayang , even when your progress feels slow , your effort still matters.
-
-nd semua result akan datang immediately. sometimes you need patience , practice and time.
-
-so don't look down on yourself just because something takes longer than expected.
-
-bb harap sayang terus berusaha and percaya yang setiap langkah kecil pun ada maknanya.
-
-<span class="pink">keep showing up for yourself , sayang.</span></p>
-</article>
-
-<!-- 8 -->
-<article class="slide">
- <div class="emoji">☁️</div>
- <h2>when your heart feels heavy.</h2>
- <div class="arabic">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</div>
- <div class="translation">"Ketahuilah, dengan mengingati Allah hati menjadi tenteram."</div>
- <div class="ref">Surah Ar-Ra'd · 13:28</div>
- <div class="line"></div>
- <p>kalau ada masa sayang rasa overwhelmed , try slow down kejap
-
-tarik nafas , minum air , rest kalau perlu , and take a moment to remember Allah.
-
-you don't need to act strong every single day
-
-and if something is bothering you , it's okay to talk to someone you trust too.
-
-<span class="pink">your peace matters , sayang.</span></p>
-</article>
-
-<!-- 9 -->
-<article class="slide">
- <div class="emoji">🌙</div>
- <h2>trust Allah with what you cannot control.</h2>
- <div class="arabic">وَمَن يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ</div>
- <div class="translation">"Dan sesiapa yang bertawakal kepada Allah, maka cukuplah Allah baginya."</div>
- <div class="ref">Surah At-Talaq · 65:3</div>
- <div class="line"></div>
- <p>do what you can sayang, and leave the things you can't control to Allah.
-
-study , prepare , make dua , then trust Him with the outcome.
-
-nd semua benda akan happen exactly macam yang kita plan , but that doesn't mean you should stop trying.
-
-<span class="pink">usaha dengan sabar , doa dengan harapan , and tawakal.</span></p>
-</article>
-
-<!-- 10 -->
-<article class="slide">
- <div class="emoji">💜</div>
- <h2>a little dua just for you.</h2>
- <p>ya Allah, jagalah sayangku sepanjang dia berada di gambang.
-
-permudahkan urusannya dalam menuntut ilmu, tenangkan hatinya ketika dia risau, dan berikan dia kekuatan ketika dia penat.
-
-kurniakanlah dia kefahaman, ilmu yang bermanfaat, kesihatan yang baik dan rehat yang mencukupi.
-
-jauhkanlah dia daripada tekanan yang berlebihan, dan hadirkanlah orang-orang yang baik dalam hidupnya.
-
-ya Allah, berkatilah usahanya dan bimbinglah dia menuju masa depan yang baik.
-
-آمِين يَا رَبَّ الْعَالَمِينَ</p>
- <div class="ref">a personal dua written with love ♡</div>
-</article>
-
-<!-- 11 -->
-<article class="slide">
- <div class="emoji">💌</div>
- <h2>about us, my love.</h2>
- <p>i know sem 2 might make you busy , and bb faham sayang ada banyak benda mau fokus.
-
-so nd payah rasa bersalah kalau lambat reply sebab belajar or sebab sayang perlu rest.
-
-bb nd mau jadi another thing that makes you stressed.
-
-i want to support you, cheer for you, and see you grow into the person you've always wanted to be.
-
-focus on your future sayang. bb pun mau tengok sayang berjaya.
-
-<span class="pink">i want to be your comfort , not your pressure.</span>
-
-we can take things one day at a time. ♡</p>
-</article>
-
-<!-- 12 -->
-<article class="slide">
- <div class="emoji">🌌</div>
- <h2>good luck for sem 2, my moon.</h2>
- <p>selamat balik gambang jaga adab and perangai dekat tempat orang ya sayanggg 🥹💜
-
-semoga Allah permudahkan semua urusan sayang this semester semoga kelas dipermudahkan , ilmu senang difahami , and every little effort brings something good
-
-please makan ikut waktu , drink enough water and jangan selalu tidur lambat tauu
-
-if one day things get hard , remember that you can always start again the next day.
-
-bb percaya sayang boleh buat yang terbaik at your own pace.
-
-nd perlu jadi the brightest star every night even stars have moments when their light seems small.
-
-<span class="pink">i'm proud of you, sayang. always cheering for you from here.</span></p>
- <div class="quote">until the stars fade , i'll keep wishing the best for you. ♡</div>
- <div class="ref">with love , your bb 💜</div>
-</article>
-
+<audio id="music" loop>
+ <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" onclick="toggleMusic()">♫ play music</button>
+
+<section class="screen active" id="passwordScreen">
+ <div class="card">
+  <div class="emoji">♡</div>
+  <div class="small">a little surprise</div>
+  <h1>hey, anis.</h1>
+  <p>enter our special date dulu hehe.</p>
+  <input type="password" id="password" placeholder="password">
+  <button class="primary" onclick="checkPassword()">let me in ♡</button>
+  <div class="message" id="passwordMsg"></div>
+  <div class="small">hint: our special date</div>
+ </div>
 </section>
 
-<div class="progress" id="progress"></div>
+<section class="screen" id="gameScreen">
+ <div class="card">
+  <div class="small" id="gameCount">challenge 1 / 7</div>
+  <div class="emoji" id="gameEmoji">🎯</div>
+  <h2 id="gameTitle"></h2>
+  <p id="gameDesc"></p>
+  <div class="gamebox" id="gameArea"></div>
+  <div class="message" id="gameMsg"></div>
+  <div id="gameExtra"></div>
+ </div>
+</section>
 
-<div class="buttons">
- <button id="prev" onclick="changeSlide(-1)">← back</button>
- <button id="next" onclick="changeSlide(1)">next slide ♡ →</button>
-</div>
-
-<footer class="footer">MADE FOR ANIS · UNDER THE SAME SKY ✦</footer>
-</main>
+<section class="screen" id="slideScreen">
+ <div class="card">
+  <div class="small">just for you</div>
+  <div class="emoji" id="slideEmoji"></div>
+  <div class="small" id="slideCount"></div>
+  <h2 id="slideTitle"></h2>
+  <div class="progress"><div id="bar"></div></div>
+  <div class="slideText" id="slideText"></div>
+  <button class="primary" id="nextBtn" onclick="nextSlide()">next →</button>
+ </div>
+</section>
 
 <script>
-const starArea=document.getElementById('stars');
+"use strict";
 
-for(let i=0;i<115;i++){
- const s=document.createElement('div');
- s.className='star';
- const size=Math.random()*2.4+.5;
- s.style.width=size+'px';
- s.style.height=size+'px';
- s.style.left=Math.random()*100+'%';
- s.style.top=Math.random()*100+'%';
- s.style.animationDelay=Math.random()*4+'s';
- s.style.animationDuration=(2+Math.random()*3)+'s';
- starArea.appendChild(s);
+const PASSWORD = "15/6/2026";
+
+const slides = [
+ {
+  emoji:"♡",title:"hi, sayang.",
+  text:`sooo, you made it haha.
+
+i wanted to make something for you, just because. it's a simple thing, but i made it with you in mind.
+
+anyway, hi anis. this little website is yours. enjoy it okay? ♡`
+ },
+ {
+  emoji:"☁️",title:"a little reminder",
+  text:`i know we both have our own things going on. sometimes we're busy, tired, or just don't know what to say.
+
+it's okay if we can't talk all the time. i don't expect you to be available 24/7.
+
+i just hope we still make time for each other whenever we can. even a small conversation means something to me.`
+ },
+ {
+  emoji:"🫶🏻",title:"about me",
+  text:`bb tau bb kadang-kadang overprotective sangat. sometimes i overthink and let my worries affect the way i treat you.
+
+i'm sorry kalau bb pernah buat kau terasa or uncomfortable. that's not what i want.
+
+i care about you, but i know caring doesn't mean i get to control everything. i'm still learning, and i'll try to do better.`
+ },
+ {
+  emoji:"🤍",title:"i'm sorry, sayang",
+  text:`i'm not saying sorry just to make things okay again. i really mean it.
+
+i know my actions can affect your feelings too. kalau bb buat kau uncomfortable, i'm sorry. you deserve to feel trusted and respected.
+
+i can't promise i'll never make mistakes, but i can take responsibility and learn from them.`
+ },
+ {
+  emoji:"🌷",title:"about us",
+  text:`i don't need us to be a perfect couple. we're both still learning, and misunderstandings can happen.
+
+what matters to me is that we can be honest, talk things out, and listen even when it's hard.
+
+i don't want us to ignore each other's feelings just because we're upset. let's try to understand each other instead of trying to win.`
+ },
+ {
+  emoji:"☾",title:"please remember",
+  text:`you don't have to be okay all the time. if something is bothering you, you can tell me when you're ready.
+
+i'll try to listen without making everything about me. and if bb buat salah, please let bb know too.
+
+i want us to feel safe being honest with each other. no need to pretend everything is fine when it isn't.`
+ },
+ {
+  emoji:"♡",title:"that's all, anis.",
+  text:`thank you for being part of my life.
+
+i'm happy i get to know you, spend time with you, and make memories with you. i look forward to the little things we haven't done together yet.
+
+i care about you, sayang. no big dramatic promises, just me trying to be better for myself and for us.
+
+take care always, okay? smile sikit hehe.
+
+— bb ♡`
+ }
+];
+
+let level = 0;
+let musicPlaying = false;
+let hits = 0, target = 50;
+let pins = 10, rolls = 0, baskets = 0;
+let blocksLeft = 8, puzzleStep = 1;
+let clawPos = 2, clawPrize = 0, clawTries = 3;
+let sequence = [], sequenceStep = 0, sequenceReady = false;
+
+const $ = id => document.getElementById(id);
+
+function showScreen(id){
+ document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+ $(id).classList.add("active");
 }
 
-const slides=document.querySelectorAll('.slide');
-const progress=document.getElementById('progress');
-const prev=document.getElementById('prev');
-const next=document.getElementById('next');
-let current=0;
-
-slides.forEach((slide,i)=>{
- const d=document.createElement('div');
- d.className='dot'+(i===0?' active':'');
- progress.appendChild(d);
+$("password").addEventListener("keydown",e=>{
+ if(e.key==="Enter") checkPassword();
 });
 
-const dots=document.querySelectorAll('.dot');
-
-function updateSlide(){
- slides.forEach((s,i)=>s.classList.toggle('active',i===current));
- dots.forEach((d,i)=>d.classList.toggle('active',i===current));
- prev.disabled=current===0;
- next.textContent=current===slides.length-1?'read again ♡':'next slide ♡ →';
-}
-
-function changeSlide(direction){
- if(current===slides.length-1 && direction===1){
-  current=0;
+function checkPassword(){
+ if($("password").value.trim()===PASSWORD){
+  level=0;
+  startGame();
  }else{
-  current=Math.max(0,Math.min(slides.length-1,current+direction));
+  $("passwordMsg").textContent="wrong password hehe, try again 👀";
+  $("password").value="";
  }
- updateSlide();
 }
 
-let startX=0;
-document.querySelector('.card').addEventListener('touchstart',e=>{
- startX=e.changedTouches[0].screenX;
-},{passive:true});
+function setupGame(title,emoji,desc,html){
+ $("gameCount").textContent="challenge "+(level+1)+" / 7";
+ $("gameTitle").textContent=title;
+ $("gameEmoji").textContent=emoji;
+ $("gameDesc").textContent=desc;
+ $("gameArea").innerHTML=html;
+ $("gameMsg").textContent="complete the game to unlock your slide ♡";
+ $("gameExtra").innerHTML="";
+ showScreen("gameScreen");
+}
 
-document.querySelector('.card').addEventListener('touchend',e=>{
- const difference=e.changedTouches[0].screenX-startX;
- if(Math.abs(difference)>60) changeSlide(difference<0?1:-1);
-},{passive:true});
+function winGame(text){
+ $("gameMsg").textContent=text;
+ $("gameExtra").innerHTML='<button class="primary" onclick="openSlide()">unlock slide ♡</button>';
+}
 
-updateSlide();
+// 1. ARCHERY
+function archery(){
+ hits=0;
+ target=rand(15,85);
+ setupGame("archery time","🎯","aim at the target. hit it 3 times.",`
+ <div class="arena">
+  <div class="target" id="target" style="left:${target}%">🎯</div>
+ </div>
+ <p>hits: <b id="hits">0 / 3</b></p>
+ <label>aim left or right</label>
+ <input class="range" id="aim" type="range" min="0" max="100" value="50">
+ <br><button class="primary" onclick="shootArrow()">shoot arrow ↗</button>`);
+}
+function shootArrow(){
+ if(Math.abs(Number($("aim").value)-target)<=14){
+  hits++;
+  $("hits").textContent=hits+" / 3";
+  if(hits>=3){winGame("bullseye! nice shot 🎯");return;}
+  $("gameMsg").textContent="bullseye! one more ♡";
+ }else{
+  $("gameMsg").textContent="missed! adjust your aim and try again.";
+ }
+ target=rand(15,85);
+ $("target").style.left=target+"%";
+}
+
+// 2. BOWLING
+function bowling(){
+ pins=10;rolls=0;
+ setupGame("bowling time","🎳","knock down all 10 pins in 4 rolls.",`
+ <div class="big">🎳</div>
+ <div class="pinrow" id="pinDisplay">🎳 🎳 🎳 🎳 🎳<br>🎳 🎳 🎳 🎳 🎳</div>
+ <p>pins left: <b id="pinsLeft">10</b> · rolls: <b id="rolls">0 / 4</b></p>
+ <label>throw power</label>
+ <input class="range" id="power" type="range" min="20" max="100" value="70">
+ <br><button class="primary" onclick="rollBall()">bowl! 🎳</button>`);
+}
+function rollBall(){
+ rolls++;
+ const power=Number($("power").value);
+ let knocked=power>=90?4:power>=65?3:1;
+ pins=Math.max(0,pins-knocked);
+ $("pinsLeft").textContent=pins;
+ $("rolls").textContent=rolls+" / 4";
+ $("pinDisplay").textContent=pins===0?"STRIKE! 🎉":"🎳 ".repeat(pins);
+ if(pins===0){winGame("all pins down! bowling champion 🏆");return;}
+ if(rolls>=4){
+  $("gameMsg").textContent="not quite! try bowling again.";
+  $("gameExtra").innerHTML='<button class="secondary" onclick="bowling()">retry ↻</button>';
+ }else{
+  $("gameMsg").textContent="you knocked down "+knocked+" pins!";
+ }
+}
+
+// 3. BASKETBALL
+function basketball(){
+ baskets=0;target=rand(15,85);
+ setupGame("basketball","🏀","aim for the hoop and score 3 baskets.",`
+ <div class="arena"><div class="target" id="hoop" style="left:${target}%">🏀</div></div>
+ <p>baskets: <b id="baskets">0 / 3</b></p>
+ <label>aim left or right</label>
+ <input class="range" id="basketAim" type="range" min="0" max="100" value="50">
+ <br><button class="primary" onclick="shootBasket()">shoot! 🏀</button>`);
+}
+function shootBasket(){
+ if(Math.abs(Number($("basketAim").value)-target)<=15){
+  baskets++;
+  $("baskets").textContent=baskets+" / 3";
+  if(baskets>=3){winGame("three baskets! MVP bah 😎");return;}
+  $("gameMsg").textContent="SCORE! one more 🏀";
+ }else{
+  $("gameMsg").textContent="missed! adjust your aim.";
+ }
+ target=rand(15,85);
+ $("hoop").style.left=target+"%";
+}
+
+// 4. BRICK BREAKER
+function brickBreaker(){
+ blocksLeft=8;
+ let html='<p>tap every block to break them all!</p><div class="bricks">';
+ for(let i=0;i<8;i++){
+  html+='<button class="brick" id="brick'+i+'" onclick="breakBrick('+i+')">✦</button>';
+ }
+ html+='</div><p>blocks left: <b id="blocksLeft">8</b></p><div class="big">⚪ ▰ ▰</div>';
+ setupGame("brick breaker","🧱","clear all 8 blocks to continue.",html);
+}
+function breakBrick(i){
+ const block=$("brick"+i);
+ if(!block||block.classList.contains("gone"))return;
+ block.classList.add("gone");
+ blocksLeft--;
+ $("blocksLeft").textContent=blocksLeft;
+ if(blocksLeft===0)winGame("all blocks cleared! nice one 🧱");
+}
+
+// 5. PUZZLE
+function puzzleGame(){
+ puzzleStep=1;
+ const nums=[1,2,3,4].sort(()=>Math.random()-.5);
+ const html='<p>tap the numbers in order: 1, 2, 3, 4.</p><div class="tiles">'+
+ nums.map(n=>'<button class="tile" id="tile'+n+'" onclick="tapTile('+n+')">'+n+'</button>').join("")+
+ '</div><p>next number: <b id="puzzleStep">1</b></p>';
+ setupGame("tiny puzzle","🧩","complete the puzzle in the correct order.",html);
+}
+function tapTile(n){
+ const tile=$("tile"+n);
+ if(tile.classList.contains("done"))return;
+ if(n===puzzleStep){
+  tile.classList.add("done");
+  tile.textContent="✓";
+  puzzleStep++;
+  if(puzzleStep===5){winGame("puzzle solved! smart girl 🧩");return;}
+  $("puzzleStep").textContent=puzzleStep;
+  $("gameMsg").textContent="correct! keep going ♡";
+ }else{
+  $("gameMsg").textContent="wrong one hehe, follow the order!";
+ }
+}
+
+// 6. CLAW MACHINE
+function clawMachine(){
+ clawPos=2;clawTries=3;clawPrize=rand(0,4);
+ setupGame("claw machine","🕹️","find the hidden prize. you have 3 tries.",`
+ <div class="slots">${[0,1,2,3,4].map(i=>
+  '<button class="slot '+(i===2?'selected':'')+'" id="slot'+i+'" onclick="selectSlot('+i+')">'+(i===2?'🕹️':'?')+'</button>'
+ ).join("")}</div>
+ <p>tries left: <b id="tries">3</b></p>
+ <button class="primary" onclick="grabPrize()">grab prize! 🎁</button>`);
+}
+function selectSlot(i){
+ clawPos=i;
+ for(let n=0;n<5;n++){
+  $("slot"+n).classList.toggle("selected",n===i);
+  $("slot"+n).textContent=n===i?"🕹️":"?";
+ }
+}
+function grabPrize(){
+ if(clawPos===clawPrize){
+  $("slot"+clawPos).textContent="🎁";
+  winGame("you got the prize! lucky girl 🎁");
+  return;
+ }
+ clawTries--;
+ $("tries").textContent=clawTries;
+ if(clawTries<=0){
+  $("gameMsg").textContent="the machine is tricky 😭 try again!";
+  $("gameExtra").innerHTML='<button class="secondary" onclick="clawMachine()">retry machine ↻</button>';
+ }else{
+  $("gameMsg").textContent="not that one! try another slot.";
+ }
+}
+
+// 7. MEMORY CHALLENGE
+function finalChallenge(){
+ sequence=Array.from({length:4},()=>rand(0,3));
+ sequenceStep=0;
+ sequenceReady=false;
+ setupGame("final challenge","🏆","memorise the colour sequence, then repeat it.",`
+ <p id="sequenceText">remember: ${sequence.map(colourEmoji).join(" ")}</p>
+ <button class="secondary" onclick="hideSequence()">ready! hide the sequence</button>
+ <div class="colors">
+ ${[0,1,2,3].map(i=>'<button class="color c'+i+'" onclick="chooseColour('+i+')">'+colourEmoji(i)+'</button>').join("")}
+ </div>
+ <p>correct: <b id="seqProgress">0 / 4</b></p>`);
+}
+function hideSequence(){
+ sequenceReady=true;
+ $("sequenceText").textContent="now repeat the sequence!";
+ $("gameMsg").textContent="tap the colours in the same order.";
+}
+function chooseColour(n){
+ if(!sequenceReady){
+  $("gameMsg").textContent="press the hide button first!";
+  return;
+ }
+ if(n!==sequence[sequenceStep]){
+  sequenceStep=0;
+  $("seqProgress").textContent="0 / 4";
+  $("gameMsg").textContent="not quite! try the sequence again.";
+  return;
+ }
+ sequenceStep++;
+ $("seqProgress").textContent=sequenceStep+" / 4";
+ if(sequenceStep===4){
+  winGame("you finished every challenge! 🎉");
+ }
+}
+function colourEmoji(n){return ["💗","💙","💚","💛"][n];}
+
+function rand(min,max){
+ return Math.floor(Math.random()*(max-min+1))+min;
+}
+
+function startGame(){
+ if(level===0)archery();
+ else if(level===1)bowling();
+ else if(level===2)basketball();
+ else if(level===3)brickBreaker();
+ else if(level===4)puzzleGame();
+ else if(level===5)clawMachine();
+ else if(level===6)finalChallenge();
+}
+
+function openSlide(){
+ const slide=slides[level];
+ $("slideEmoji").textContent=slide.emoji;
+ $("slideTitle").textContent=slide.title;
+ $("slideText").textContent=slide.text;
+ $("slideCount").textContent="slide "+(level+1)+" / "+slides.length;
+ $("bar").style.width=((level+1)/slides.length*100)+"%";
+ $("nextBtn").textContent=level===slides.length-1?"finish ♡":"next →";
+ $("nextBtn").onclick=nextSlide;
+ showScreen("slideScreen");
+
+ $("musicBtn").style.display="block";
+ const music=$("music");
+ music.volume=.35;
+ if(!musicPlaying){
+  music.play().then(()=>{
+   musicPlaying=true;
+   updateMusicButton();
+  }).catch(()=>{
+   $("musicBtn").textContent="♫ tap to play";
+  });
+ }
+}
+
+function nextSlide(){
+ if(level===slides.length-1){
+  $("slideEmoji").textContent="♡";
+  $("slideTitle").textContent="thank you, anis.";
+  $("slideText").textContent="that's the end of the little surprise. hope it made you smile, even just a little. take care, sayang. — bb ♡";
+  $("slideCount").textContent="the end";
+  $("bar").style.width="100%";
+  $("nextBtn").textContent="start again ↻";
+  $("nextBtn").onclick=()=>{
+   level=0;
+   $("nextBtn").onclick=nextSlide;
+   startGame();
+  };
+  return;
+ }
+ level++;
+ startGame();
+}
+
+function toggleMusic(){
+ const music=$("music");
+ if(musicPlaying){
+  music.pause();
+  musicPlaying=false;
+ }else{
+  music.play().then(()=>{
+   musicPlaying=true;
+   updateMusicButton();
+  }).catch(()=>{});
+ }
+ updateMusicButton();
+}
+function updateMusicButton(){
+ $("musicBtn").textContent=musicPlaying?"♫ pause music":"♫ play music";
+}
 </script>
 </body>
 </html>
